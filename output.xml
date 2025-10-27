@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3.2 (Python 3.10.5 on win32)" generated="2025-10-26T17:01:41.898424" rpa="false" schemaversion="5">
+<suite id="s1" name="testeLogin Facebook" source="E:\TesteLogin_Facebook\teste_Login_Facebook\testeLogin_Facebook.robot">
+<test id="s1-t1" name="Login com sucesso" line="15">
+<kw name="Abrir navegador facebook" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-10-26T17:01:42.327826" level="INFO">Opening browser 'chrome' to base url 'https://www.facebook.com/'.</msg>
+<arg>${URL_FACEBOOK}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-10-26T17:01:42.327826" elapsed="2.677243"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-10-26T17:01:45.006068" elapsed="0.055335"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${CAMPO_EMAIL}</arg>
+<arg>timeout=15s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2025-10-26T17:01:45.062419" elapsed="0.028865"/>
+</kw>
+<kw name="Set Selenium Speed" owner="SeleniumLibrary">
+<arg>0.5s</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" start="2025-10-26T17:01:45.093638" elapsed="0.003328"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-10-26T17:01:46.105129" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-10-26T17:01:45.096966" elapsed="1.008163"/>
+</kw>
+<status status="PASS" start="2025-10-26T17:01:42.327826" elapsed="3.777303"/>
+</kw>
+<kw name="Preencher login">
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-10-26T17:01:46.111075" level="INFO">🔍 Preenchendo campos de login...</msg>
+<arg>🔍 Preenchendo campos de login...</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-10-26T17:01:46.108065" elapsed="0.003010"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${CAMPO_EMAIL}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-10-26T17:01:46.112064" elapsed="1.048271"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-10-26T17:01:47.160335" level="INFO">Typing text 'luizhenrique2310@hotmail.com' into text field 'id=email'.</msg>
+<arg>${CAMPO_EMAIL}</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-26T17:01:47.160335" elapsed="1.709481"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${CAMPO_SENHA}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-10-26T17:01:48.870640" elapsed="1.048574"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-10-26T17:01:49.919214" level="INFO">Typing text 'trietanolamina' into text field 'id=pass'.</msg>
+<arg>${CAMPO_SENHA}</arg>
+<arg>${senha}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-26T17:01:49.919214" elapsed="1.723162"/>
+</kw>
+<arg>luizhenrique2310@hotmail.com</arg>
+<arg>trietanolamina</arg>
+<status status="PASS" start="2025-10-26T17:01:46.106062" elapsed="5.536314"/>
+</kw>
+<kw name="Clicar login">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-10-26T17:01:51.645376" level="INFO">Clicking button 'name=login'.</msg>
+<arg>${BOTAO_LOGIN}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-26T17:01:51.644646" elapsed="2.726530"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-10-26T17:01:54.371176" level="INFO">🚀 Clicou em Entrar — aguardando resposta...</msg>
+<arg>🚀 Clicou em Entrar — aguardando resposta...</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-10-26T17:01:54.371176" elapsed="0.001204"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-10-26T17:01:59.391764" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-10-26T17:01:54.372380" elapsed="5.019384"/>
+</kw>
+<status status="PASS" start="2025-10-26T17:01:51.643881" elapsed="7.748881"/>
+</kw>
+<kw name="Validar login com sucesso">
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${HOME_INDICADOR}</arg>
+<arg>timeout=15s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-10-26T17:01:59.393773" elapsed="2.536274"/>
+</kw>
+<msg time="2025-10-26T17:02:01.930893" level="INFO">${login_sucesso} = True</msg>
+<var>${login_sucesso}</var>
+<arg>Wait Until Element Is Visible</arg>
+<arg>${HOME_INDICADOR}</arg>
+<arg>timeout=15s</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2025-10-26T17:01:59.393773" elapsed="2.537120"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<msg time="2025-10-26T17:02:07.829443" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-3.png"&gt;&lt;img src="selenium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-10-26T17:02:07.829443" level="FAIL">Element 'css=div._9ay7' not visible after 5 seconds.</msg>
+<arg>${MENSAGEM_ERRO}</arg>
+<arg>timeout=5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="FAIL" start="2025-10-26T17:02:01.931911" elapsed="5.913691">Element 'css=div._9ay7' not visible after 5 seconds.</status>
+</kw>
+<msg time="2025-10-26T17:02:07.845602" level="INFO">${erro_login} = False</msg>
+<var>${erro_login}</var>
+<arg>Wait Until Element Is Visible</arg>
+<arg>${MENSAGEM_ERRO}</arg>
+<arg>timeout=5s</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2025-10-26T17:02:01.930893" elapsed="5.914709"/>
+</kw>
+<if>
+<branch type="IF" condition="${login_sucesso}">
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-10-26T17:02:07.861378" level="INFO">✅ Login efetuado com sucesso! Teste finalizado com êxito.</msg>
+<arg>✅ Login efetuado com sucesso! Teste finalizado com êxito.</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-10-26T17:02:07.861378" elapsed="0.000000"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-10-26T17:02:08.511472" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-4.png"&gt;&lt;img src="selenium-screenshot-4.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-10-26T17:02:07.861378" elapsed="0.650094"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-10-26T17:02:08.514915" elapsed="2.742601"/>
+</kw>
+<kw name="Pass Execution" owner="BuiltIn">
+<msg time="2025-10-26T17:02:11.257516" level="INFO">Execution passed with message:
+✅ Login aceito — teste aprovado.</msg>
+<arg>✅ Login aceito — teste aprovado.</arg>
+<doc>Skips rest of the current test, setup, or teardown with PASS status.</doc>
+<status status="PASS" start="2025-10-26T17:02:11.257516" elapsed="0.000000">✅ Login aceito — teste aprovado.</status>
+</kw>
+<status status="PASS" start="2025-10-26T17:02:07.845602" elapsed="3.411914">✅ Login aceito — teste aprovado.</status>
+</branch>
+<branch type="ELSE IF" condition="${erro_login}">
+<kw name="Log" owner="BuiltIn">
+<arg>❌ Erro de login detectado.</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" start="2025-10-26T17:02:11.257516" elapsed="0.000000"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="NOT RUN" start="2025-10-26T17:02:11.257516" elapsed="0.000000"/>
+</kw>
+<kw name="Fail" owner="BuiltIn">
+<arg>❌ Login ou senha incorretos — teste reprovado.</arg>
+<doc>Fails the test with the given message and optionally alters its tags.</doc>
+<status status="NOT RUN" start="2025-10-26T17:02:11.257516" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2025-10-26T17:02:11.257516" elapsed="0.000000"/>
+</branch>
+<branch type="ELSE">
+<kw name="Log" owner="BuiltIn">
+<arg>⚠️ Não foi possível determinar o resultado do login.</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" start="2025-10-26T17:02:11.257516" elapsed="0.000000"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="NOT RUN" start="2025-10-26T17:02:11.257516" elapsed="0.000000"/>
+</kw>
+<kw name="Fail" owner="BuiltIn">
+<arg>⚠️ Resultado indefinido — verifique manualmente.</arg>
+<doc>Fails the test with the given message and optionally alters its tags.</doc>
+<status status="NOT RUN" start="2025-10-26T17:02:11.257516" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2025-10-26T17:02:11.257516" elapsed="0.000000"/>
+</branch>
+<status status="PASS" start="2025-10-26T17:02:07.845602" elapsed="3.411914">✅ Login aceito — teste aprovado.</status>
+</if>
+<status status="PASS" start="2025-10-26T17:01:59.392762" elapsed="11.864754">✅ Login aceito — teste aprovado.</status>
+</kw>
+<kw name="Fechar navegador" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-10-26T17:02:11.257516" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2025-10-26T17:02:11.257516" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2025-10-26T17:01:42.327826" elapsed="28.929690">✅ Login aceito — teste aprovado.</status>
+</test>
+<status status="PASS" start="2025-10-26T17:01:41.914217" elapsed="29.343299"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="testeLogin Facebook" id="s1" pass="1" fail="0" skip="0">testeLogin Facebook</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
